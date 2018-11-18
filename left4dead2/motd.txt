@@ -1,0 +1,19 @@
+﻿!c  角色选择菜单
+!rhelp 显示插件使用说明
+!sinfo 显示服务器人数信息
+!jg 或 !joingame 加入游戏
+!away 观察者
+!addbot 增加一个电脑
+!kb 踢除所有bot (只管理员可用)
+!sset 设置服务器人数 (只管理员可用)
+!bd 绑定键盘 L 键自动输入!joingame
+!sp 显示还在加载的玩家
+!zs 自杀
+!rygive 获得物品
+!mvp 立即显示排名
+!onhx 开启回血
+!onammo 开启2倍备弹
+!ontui 开启无限推
+!onhw 开启自动红外
+!onfs 开启反伤
+!mmn 多重补给
