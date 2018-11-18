@@ -1,0 +1,844 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>求生之路2-望夜整合插件说明</title>
+</head>
+
+<body>
+<div>
+  <p>&nbsp;</p>
+  <p><span style="color: hsla(239,100%,58%,1)"><strong>插件安装录像</strong></span><strong>:<a href="http://v.youku.com/v_show/id_XMzAyMzc5ODA2MA" target="new" style="color: hsla(205,100%,64%,1)">http://v.youku.com/v_show/id_XMzAyMzc5ODA2MA</a></strong></p>
+  <p></p>
+</div>
+<div>
+  <p><span style="color: hsla(0,100%,50%,1)"><strong>说明: 2017-8-3支持版本 2149 及更新(旧版本不保证,请自行测试) -by 望夜</strong><br>
+    <strong>PS:请根据求生版本选择对应版本的插件.</strong><br>
+    <strong>◆◆注意:仅基于合作模式制作整合的插件◆◆</strong></span></p>
+  <p><br>
+    <strong style="color: hsla(304,100%,50%,1)">★重申:这是插件不是外挂,也没有修改相关脚本,所以本插件不会被ban,只是你进不了入开了VAC(Valve Anti-cheating反作弊)的服而已,你想进也进不去,要先关了插件才行★</strong></p>
+</div>
+<div><p><span style="color: hsla(239,100%,58%,1)"><strong>JSGME里没特别写的其他插件都集成在(插件平台x-x-x)里,不需要的自行删除, 路径 求生目录\left4dead2\addons\sourcemod\plugins\ 下</strong></span><br>
+  <br>
+  <strong>★插件平台★ </strong><br>
+【sourcemod】stable branch 最新1.8.0-git6016<br>
+【metamod】stable branch 最新1.10.7-git959<br>
+【l4dtoolz】1.0.0.9h (去除人数限制)  <br>
+【电击器修正 &amp; witch攻击修正 &amp; 可刷出所有近战】<br>
+-------------------------------------------------<br>
+◆◆◆支持玩家数打开 游戏目录\left4dead2\cfg\sourcemod\l4d2_rmc.cfg 默认8,请自行修改◆◆◆<br>
+L4D2_Rmc_total "8"<br>
+或者在游时聊天窗输入 !sset 可随时设置变更游戏人数<br>
+<br>
+JSGME:<br>
+【插件平台x-x-x】里的<br>
+★多人控制插件★ l4d_Rmc.smx<br>
+★角色选择插件★ R_csm.smx<br>
+★武器解锁★ l4d2_WeaponUnlock.smx<br>
+★客户端连接信息显示及黑白提示★ l4d2_info.smx<br>
+★显示特感生命值★ l4d_infectedhp.smx<br>
+★给于物品★ l4d_gear_transfer.smx<br>
+★爆头击杀显示插件★ l4d_broadcast.smx<br>
+★功能插件★ rygive.smx<br>
+<br>
+【单选】<br>
+★友伤控制★ R_UD_FF.smx<br>
+★公告-击杀排名★ l4d2_kill_mvp.smx<br>
+★回血插件★ l4d2_health_return.smx<br>
+★备弹量★ l4d2_ammo_set.smx<br>
+★多特插件★ R_AutoIS.smx<br>
+★Tank自动增加血量★ l4d2_tank_hp.smx<br>
+★开关无限推或自动红外或自动连跳★ R_autoset.smx<br>
+★多重补给插件★ l4d2_more_medical.smx<br>
+★防止4+角色装备混乱★R-MA.smx <br>
+★自动换图★R_AC_MAPS.smx<br>
+★反伤★ R_FF_Reflect.smx<br>
+-------------------------------------------------<br>
+◆绑定按键(自选)◆<br>
+游戏目录\left4dead2\cfg\autoexec.cfg<br>
+在最下面添加<br>
+exec zmykey.cfg<br>
+或者打开控制台输入exec zmykey.cfg回车<br>
+说明:绑定以下按键自动在聊天窗输入<br>
+bind "j" "say_team !c"<br>
+bind "k" "say_team !away"<br>
+bind "l" "say_team !joingame"<br>
+bind "o" "say_team !admin"<br>
+bind "p" "say_team !rygive"<br>
+</p>
+</div>
+<div>
+  <p><span style="color: hsla(239,100%,58%,1)"><strong>★★★★★★★★★★★★★★★★★★</strong></span><span style="color: hsla(0,100%,50%,1); font-size: 30px;"><strong>安装说明</strong></span><strong><span style="color: hsla(239,100%,58%,1)">★★★★★★★★★★★★★★★★★★</span></strong><br>
+    PS:管理员添加工具&amp;插件清理工具需【.net2.0运行库】<br>
+    xp:如果无法运行请下载<a href="http://www.crsky.com/soft/4818.html" target="_blank">www.crsky.com/soft/4818.html</a>安装<br>
+    win7:自带<br>
+    win8&amp;win10:控制面板&gt;程序和功能&gt;启用或关闭Windows功能&gt;点选【.NET Framework 3.5】确定安装.<br>
+    (如果杀软有提示,请放行.要是不放心-_-!!请看手动操作)<br>
+  <br>
+    【1】.★只复制【插件清理.exe】到游戏根目录下(即跟left4dead2.exe放在一起),然后运行,点击〖清理插件〗★<br>
+  <br>
+    【2】.清理完插件后,复制【JS-MODS文件夹】,【JSGME.exe】,【JSGME.ini】,【管理员添加工具.exe】这4个到 游戏根目录下(即跟left4dead2.exe放在一起)<br>
+  <br>
+    【3】.运行JSGME.exe 左边选择要的插件,【插件平台x-x-x】这个要先启用,其它的按需选择启用(★启用时提示冲突的,点"是"即可★)<br>
+  <br>
+    【4】.之后添加管理员<br>
+  <br>
+  <span style="color: hsla(239,100%,58%,1)"><strong>★★★添加管理员方法★★★</strong><br>
+  <strong>已添加本地主机127.0.0.1 为管理员,如果无效请往下看</strong></span><br><br>
+  <strong style="color: hsla(304,100%,50%,1)">【添加方法.1】★★★★★★正版:添加管理员★推荐★★★★★★</strong><br>
+    (盗版应该没有Steam UniqueID或是重复的Steam UniqueID此法应该不适用)<br>
+    无论是主机还是要添加为管理员的人<br>
+    进图后控制台打status回车 找到你的Steam UniqueID<br>
+    例:<br>
+    # userid name uniqueid connected ping loss state rate adr<br>
+    #  3 2 "Nights.R" STEAM_1:0:30320402 11:12 50 0 active 30000 loopback<br>
+    .....<br>
+    复制 STEAM_1:0:30320402 发给主机<br>
+    然后主机打开 ..\left4dead2\addons\sourcemod\configs\下的admins_simple.ini 在最后增加一行<br>
+  "STEAM_1:0:30320402"  "99:z" //望夜<br>
+    |                            |        | <br>
+    注1                    注2     注3<br>
+    注1:STEAM_1:0:30320402 (要添加管理员的Steam UniqueID)<br>
+    注2:99:z (照抄)<br>
+    注3://望夜 (前面加//的后面的文字就变注释无实际作用,以此方便知道Steam UniqueID对应的是谁)<br>
+    保存后 主机可在控制台输入 sm_reloadadmins 回车,重新加载管理员列表,这样不用重开游戏便会生效<br>
+  <br>
+    这种添加管理员的好处是不用设置密码,而且无论你的游戏昵称改成啥都没关系,此方法只认Steam UniqueID.也没有同名困扰.<br>
+  <br>
+    <span style="color: #0C9249"><strong>-----------PS-----------------<br>
+这里回答一个问题:有人问说要是盗版刚好跟你的UniqueID一样咋办?<br>
+1.正版建服: 只有正版能进,所以无以上困扰<br>
+2.盗版或 服务器建服(又用了服务器破解的话) 正盗才都能进 ,但是没那么巧的事<br>
+如果真的会那么巧的话,打开addons\sourcemod\configs下修改core.cfg 里SteamAuthstringValidation 的 "no" 改为 "yes" ,改了之后盗版能不能进就不知了,这个是要经steam验证UniqueID<br>
+-------------------------------</strong></span><br>
+  <br>
+  <span style="color: hsla(239,100%,58%,1)"><strong>正版添加管理员到此结束</strong><br>
+  <strong>盗版的添加管理员请往下看,正版也可以使用此方法,但还是建议用上面的推荐的正版添加管理员方法</strong></span><br><br>
+  <strong style="color: hsla(304,100%,50%,1)">【添加方法.2】★★★★★★盗版:使用【管理员添加工具.exe】添加管理员★★★★★★</strong><br>
+    正版:游戏ID就是你steam的昵称<br>
+    盗版:游戏ID就是你rev.ini里的PlayerName="xxx",引号里的xxx就是你的游戏ID (rev.ini里游戏ID后面最后加个空格,以免造成乱码)<br>
+    添加管理员后进入游戏如果出现密码错误提示,请检查你的mod(即vpk)中是否集成了autoexec.cfg这个文件,例如搞笑语音等.<br>
+    (求生版本2147:2月22更新后不再读取vpk里的cfg文件)<br>
+    ★建议用管理员添加工具★添加管理员,会增加一个自动加载r_cj.cfg,避免无法加载autoexec.cfg而产生的问题.<br>
+    不想用的插件运行JSGME,请点击右边插件再选择停用即可,纯净无污染.<br>
+    ★★★添加好友为管理员★★★<br>
+    将【管理员添加工具.exe】发给你朋友,扔在求生目录下,让他运行后选择"本机无插件" &gt; 添加本机为管理员 <br>
+    然后主机这边 在新管理员那输入朋友的名字 点击添加新管理员输入朋友的密码<br><br>
+  <strong style="color: hsla(304,100%,50%,1)">【添加方法.3】★★★★★★手动添加管理员★★★★★★</strong><br>
+    添加管理员后进入游戏如果出现密码错误提示,请检查你的mod(即vpk)中是否集成了autoexec.cfg这个文件,例如搞笑语音等.<br>
+    (求生版本2147:2月22更新后不再读取vpk里的cfg文件)<br>
+    注意游戏id为中文的先修改rev.ini里的PlayerName在最后个一汉字后面加个空格,以避免游戏偶儿读取成乱码,造成管理员识别错误.<br>
+    例: PlayerName="我的名字 " 名字前后要带引号<br>
+    ◆设置管理员(必改)◆<br>
+    打开 ..\left4dead2\addons\sourcemod\configs\下的<br>
+    修改 admins_simple.ini 最后一行<br>
+  "你的名字"     "99:z" "你的密码"<br>
+    说明:"你的rev.ini里的名字"     "99:z" "你的密码"<br>
+    可增加多个管理员<br>
+    -------------------------------------------------<br>
+    ◆最后(必加)◆ <br>
+    游戏目录\left4dead2\cfg\autoexec.cfg (没有就自已新建一个)<br>
+    在最上面添加<br>
+    setinfo _rpassw 1234567890<br>
+    说明:setinfo _rpassw照抄不变,前面rpassw是本插件存储密码的变量名,后面那个1234567890是你的密码在admins_simple.ini改<br>
+    如果你原有的autoexec.cfg里有setinfo _rpassw xxxx的要删除,换上自已的.<br><br>
+    <strong style="color: hsla(239,100%,58%,1)">★★★★★★正版使用插件★★★★★★</strong><br>
+【1】打开steam平台,右键Left 4 Dead 2 &gt; 属性 &gt; 常归 &gt; 设置启动选项... &gt; 写上 -insecure<br>
+如已有启动参数的在最后增加 空格 -insecure 例如:-console -insecure<br>
+【2】运行求生2,进入游戏后会有个警告窗口,你无法连接到受VAC保护的服务器,确定即可<br>
+(如警告所说,你用了插件后就进不了那种开了VAC的服(反作弊))<br>
+【3】.不想用插件运行JSGME,请点击右边插件再选择停用即可.<br>
+接着去掉 设置启动选项... &gt; 上的 -insecure</p>
+</div>
+<div>
+  <p><strong style="color: hsla(239,100%,58%,1)">◆◆◆◆◆◆建多人服,3种选择:◆◆◆◆◆◆</strong><br>
+    <strong style="color: hsla(304,100%,50%,1)">◆1:正版:大厅建◆</strong><br>
+大厅建的当然只能4人,你可以配合用一款8人大厅mod,但最多就是8人<br>
+创意工坊:8 Slots Lobby Mod<br>
+<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=546656726" target="new">http://steamcommunity.com/sharedfiles/filedetails/?id=546656726</a><br>
+只启用该mod就行,他mod说明里的那些都不需要.<br>
+<span style="color: hsla(0,100%,50%,1)"><strong>PS:求生版本2147:2月22更新后不再读取vpk里的cfg文件,没测试不知会否影响8人大厅mod,如果有问题,自行将下面内容添加到\Left 4 Dead 2\left4dead2\cfg\listenserver.cfg</strong></span></p>
+  <p>sv_maxplayers 8<br>
+sv_visiblemaxplayers -1<br>
+sv_removehumanlimit 1<br>
+sv_allow_lobby_connect_only 0<br>
+sm_cvar sv_maxplayers 8<br>
+sm_cvar sv_visiblemaxplayers -1<br>
+sm_cvar sv_removehumanlimit 1<br>
+sv_consistency 0</p>
+  <p><strong style="color: hsla(304,100%,50%,1)">◆2:正盗通用:控制台建服◆</strong><br>
+主机用控制台map建图(建主的人要映射27015端口)百度自已ip,其他人connect 主机ip进入例如绝境求生模式的 map 地图名 mutation4<br>
+具体查看<strong style="color: hsla(239,100%,58%,1)">【端口映射建服.mht】</strong><br>
+<strong style="color: hsla(304,100%,50%,1)">◆3:正盗通用:第3方平台建服◆</strong><br>
+利用第3方平台,比如浩方,就不用映射端口了,缺点就不用说了,想联的都得用,麻烦.注意:主机要在第3方平台该游戏的启动参数入加 -insecure</p>
+</div>
+<div><p>██████████████████████████████████████<br>
+  <span style="color: hsla(239,100%,58%,1)"><strong>         ★★★插件列表&amp;说明★★★</strong><br>
+  <strong>★★★以下插件如不需要可自行删除.★★★</strong></span><br>
+██████████████████████████████████████<br>
+★多人控制插件★ l4d_Rmc.smx  作者:望夜<br>
+聊天窗输入<br>
+!rhelp 显示插件使用说明<br>
+!sinfo 显示服务器人数信息<br>
+!jg 或 !joingame 加入游戏<br>
+!away 观察者<br>
+!addbot 增加一个电脑<br>
+!kb 踢除所有bot (只管理员可用)<br>
+!sset 设置服务器人数 (只管理员可用)<br>
+!bd 绑定键盘 L 键自动输入!joingame<br>
+!sp 显示还在加载的玩家<br>
+!zs 自杀<br>
+增加cfg来设置默认最大玩家数(默认4人)<br>
+增加一个参数是否允许只有管理员能!away<br>
+<br>
+增加cfg来设置是否开启2个预留的管理员通道 l4d2_ADM_CHA  0关1开<br>
+(例:你设置6人,实际是6+2个位置,有2个位置看不到,可以用connect ip来加入,只留给管理员)<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d2_rmc.cfg修改<br>
+██████████████████████████████████████<br>
+★角色选择插件★ R_csm.smx  作者:望夜<br>
+<br>
+聊天窗输入<br>
+!c  角色选择菜单<br>
+!csc 管理员设置某人角色<br>
+██████████████████████████████████████<br>
+★武器解锁★ l4d2_WeaponUnlock.smx  最新版本0.8.1 原作:Crimson_Fox 汉化&amp;修改:望夜<br>
+<br>
+解锁及随机刷出以下武器<br>
+mp5<br>
+awp<br>
+鸟狙<br>
+sg552<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d2_WeaponUnlock.cfg<br>
+██████████████████████████████████████<br>
+★客户端连接信息显示及黑白提示★ l4d2_info.smx  作者:望夜<br>
+<br>
+██████████████████████████████████████<br>
+★显示特感生命值★ l4d_infectedhp.smx  最新1.0.2 原作:NiCo-op 汉化:望夜<br>
+<br>
+生命的符号及显示哪些特感生命可在参数里修改.<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d_infectedhp.cfg<br>
+██████████████████████████████████████<br>
+★给于物品★ l4d_gear_transfer.smx  最新1.5.10 原作:SilverShot 汉化:望夜<br>
+<br>
+电脑会自动给于捡到的物品,玩家也可以给于或交换物品(包括投掷药包之类) 默认:重装子弹键(R键)给于<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d_gear_transfer.cfg<br>
+██████████████████████████████████████<br>
+★爆头击杀显示插件★ l4d_broadcast.smx  作者:Voiderest 汉化&amp;修改:望夜<br>
+<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d_broadcast.cfg<br>
+██████████████████████████████████████<br>
+★多重补给插件★ l4d2_more_medical.smx  作者:望夜<br>
+<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d2_more_medical.cfg<br>
+<br>
+打开可修改补给倍数.默认1倍(即游戏默认的),最多99.<br>
+游戏时聊天窗输入!mmn 可随时变更多重补给倍数但不保存至cfg,下次游戏重开还是以cfg设置的为准.<br>
+██████████████████████████████████████<br>
+★功能插件★ rygive.smx  作者:望夜<br>
+聊天窗输入<br>
+!rygive<br>
+命令菜单<br>
+【获得物品】<br>
+1. "手枪及近战"<br>
+2. "微种及步枪"<br>
+3. "散弹及狙击"<br>
+4. "药品及投掷"<br>
+5. "其它"<br>
+6. "升级附件&amp;特殊" 新增2个选项 处死所有特感 及 处死所有玩家<br>
+7. " 重复上次操作 "<br>
+8. "服务器人数设置" 不要少于当前人数<br>
+------------------<br>
+◆人物列表◆<br>
+给于物品的人物(只显示活人)<br>
+最后一项是给于全部人<br>
+------------------<br>
+◆传送列表◆<br>
+传送某人或所有人(只显示活人)到某人身边<br>
+传送在6. "升级附件&amp;特殊"里<br>
+------------------<br>
+◆复活列表◆<br>
+复活某人(只显示死人)<br>
+最后一项是复活所有死人<br>
+复活在6. "升级附件&amp;特殊 "里<br>
+<br>
+██████████████████████████████████████<br>
+★友伤控制★ R_UD_FF.smx  作者:望夜<br>
+<br>
+免除友伤:默认1,2,3全开(燃烧炸弹类的不免)<br>
+1.被特感(smoker,jockey,charger,hunter)控制时(解控后都有1秒的免友伤时间缓冲)<br>
+2.相互靠太近时<br>
+3.近战<br>
+配置参数修改 游戏目录\L4D2\left4dead2\cfg\sourcemod\R_UD_FF.cfg<br>
+██████████████████████████████████████<br>
+★公告-击杀排名★ l4d2_kill_mvp.smx  作者:望夜<br>
+<br>
+说明:<br>
+聊天窗时时公告显示击杀特感排名,默认2分钟公告一次<br>
+配置参数修改 游戏目录\L4D2\left4dead2\cfg\sourcemod\l4d2_kill_mvp.cfg<br>
+可输入!mvp 立即显示排名<br>
+██████████████████████████████████████<br>
+★回血插件★ l4d2_health_return.smx 作者:望夜<br>
+<br>
+!onhx 开启回血<br>
+!offhx 关闭回血<br>
+血量上限,击杀特感,击杀witch,救人,帮人打包可回血量<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d2_health_return.cfg<br>
+██████████████████████████████████████<br>
+★备弹量★ l4d2_ammo_set.smx 作者:望夜<br>
+<br>
+聊天输入<br>
+!onammo 开启2倍备弹<br>
+!onammo1 开启自定备弹<br>
+!onammo2 开启无限备弹<br>
+!offammo 恢复默认备弹<br>
+<br>
+当设定的M60备弹大于0时打完弹夹会自动重装不会扔掉<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d2_ammo_set.cfg<br>
+██████████████████████████████████████<br>
+★多特插件★ R_AutoIS.smx  汉化&amp;修改:望夜<br>
+<br>
+说明:<br>
+增加了命令来开关多特,聊天窗输入<br>
+◆2种刷新方式, !on14 和 !on142◆<br>
+◆!on14(按cfg配置来刷) , !on142 按人数来刷(最少8特) , !addif按人增加特感数 , !off14关◆<br>
+◆!it 设置多样特感刷新时间◆<br>
+<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\R_AutoIS.cfg<br>
+<br>
+!on142模式 &gt;4玩家时,每加1人加几特感,最多6,!addif可在游戏时更改本参数<br>
+l4d2_add_if "2" 默认每加1人加2特<br>
+<br>
+<br>
+想更快的刷出特感请修改<br>
+<br>
+l4d2_ais_fast_spawn 为 1<br>
+<br>
+然后修改下面的最小和最大产卵时间,越小越快<br>
+l4d2_ais_time_min 和 l4d2_ais_time_max<br>
+<br>
+特感数量 同时存在特感上限 最多28,默认16<br>
+l4d2_ais_limit<br>
+<br>
+一波特感产卵数,最多28,(同时也受限于l4d2_ais_limit) 默认8,这个太多刷特感时会造成卡顿,建议默认8就好<br>
+l4d2_ais_spawn_size<br>
+<br>
+██████████████████████████████████████<br>
+★Tank自动增加血量★ l4d2_tank_hp.smx 作者:望夜<br>
+<br>
+设定参数时注意,参数里的数值是普通难度TANK的血量,专家的TANK血量会自动*2<br>
+<br>
+l4d2_basic_hp 基本血量 &lt;=4个玩家时 默认4000 <br>
+l4d2_add_hp &gt;4个玩家时,每多一名玩家Tank增加生命值(&lt;=4个玩家时不生效) 默认1000<br>
+<br>
+例:专家难度<br>
+如:7人就是7-4=3 3*1k+4k=7k Tank的生命就是 7k*2=1.4w<br>
+如:13人就是13-4=9 9*1k+4k=1.3w Tank的生命就是 1.3w*2=2.6w<br>
+如:1-4人就是4k*2=Tank的生命就是 8000<br>
+<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d2_tank_hp.cfg<br>
+██████████████████████████████████████<br>
+★开关无限推或自动红外或自动连跳★ R_autoset.smx 作者:望夜<br>
+<br>
+聊天输入<br>
+!ontui 开启无限推<br>
+!offtui 关闭无限推<br>
+!onhw 开启自动红外<br>
+!offhw 关闭自动红外<br>
+!onrb 开启按住空格自动连跳<br>
+!offrb 关闭按住空格自动连跳<br>
+<br>
+██████████████████████████████████████<br>
+★防止4+角色装备混乱★R-MA.smx 作者:望夜<br>
+修正大于4人时过关然后回合重启时角色枪枝物品混乱(血量类的没做修正)<br>
+<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\R-MA.cfg<br>
+██████████████████████████████████████<br>
+★自动换图★R_AC_MAPS.smx 作者:望夜<br>
+<br>
+换图列表文件 游戏目录\left4dead2\addons\sourcemod\data\R_AC_MAPS.txt 可自行增删<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\R_AC_MAPS.cfg<br>
+██████████████████████████████████████<br>
+★友伤控制★ R_FF_Reflect.smx  作者:望夜<br>
+AI及投掷,燃烧,爆炸类(榴弹会)的不反<br>
+反伤百分比,0.5=50% 1.0=100% (取值范围0.0-2.0)<br>
+默认0.5<br>
+开关命令:!onfs !offfs <br>
+配置参数修改 游戏目录\L4D2\left4dead2\cfg\sourcemod\R_FF_Reflect.cfg<br>
+██████████████████████████████████████</p></div>
+<div><p><span style="color: hsla(239,100%,58%,1)"><strong>★更新说明:★</strong></span><br>
+  <br>
+之前的更新请查看2105插件说明<br>
+2013.04.30更新内容<br>
+支持最新版本 2121 <br>
+升级:<br>
+【sourcemod】new stable branch 稳定版最新1.5.0-hg3833<br>
+【metamod】stable branch 稳定版最新1.9.3-hg816<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2013.05.12更新内容<br>
+支持最新版本 2121 <br>
+更新:<br>
+★功能插件★ rygive.smx :修正小刀,增加刷小刀功能(控制台也能刷).<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2013.07.21更新内容<br>
+增加以下插件:<br>
+★爆头击杀显示插件★ l4d_broadcast_1_2_0.smx<br>
+★多重补给插件★ l4d2_more_medical.smx<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2013.10.19更新内容<br>
+仅支持版本 2121 (其它版本不保证)<br>
+升级:<br>
+【sourcemod】Releases 1.5.0-hg3845<br>
+【metamod】stable branch 1.9.3-hg821<br>
+<br>
+更新:<br>
+★多重补给插件★ l4d2_more_medical.smx 增加多重近战拾取<br>
+★武器解锁★ l4d2_WeaponUnlock.smx 增加参数控制mp5及sg552的附加伤害<br>
+<br>
+增加以下插件(可选,用JSGME.EXE启用或停用)<br>
+★友伤修正★ l4d2_undoff.smx<br>
+★公告-击杀排名★ l4d2_kill_mvp.smx<br>
+★14特感插件★ l4d2_autoIS.smx <br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2013.10.28更新内容<br>
+<br>
+★公告-击杀排名★ l4d2_kill_mvp.smx <br>
+增加友军伤害统计,显示黑枪王<br>
+<br>
+★多人控制插件★ l4d_Rmc.smx  <br>
+10-26<br>
+!addbot 时电脑会直接刷新在玩家身边<br>
+增加cfg来设置默认最大玩家数(默认4人),配置参数修改\left4dead2\cfg\sourcemod\l4d2_rmc.cfg修改<br>
+10-27<br>
+!addbot时如果bot数大于观察者数将不再增加bot 除非幸存才数小于4 ,以避免一些无聊之人乱加bot<br>
+<br>
+★功能插件★ rygive.smx  : <br>
+复活命令不再使用cheats,复活后的人直接重生在玩家身边.<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.1.20更新内容<br>
+<br>
+★武器解锁★ l4d2_WeaponUnlock.smx 修正附加伤害的错误<br>
+更新 管理员添加工具1.1 修复bug 增加添加新管理员功能<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.1.23更新内容<br>
+<br>
+更新 管理员添加工具1.2 修正1.1在无autoexec.cfg时会出错的bug<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.3.28更新内容<br>
+<br>
+★多人控制插件★ l4d_Rmc.smx<br>
+修正一个bug<br>
+增加一个参数是否允许只有管理员能!away<br>
+<br>
+★客户端连接信息显示★ l4d2_info.smx<br>
+重新制作了l4d2_info.smx替换 playerinfo-chs.smx 旧版控制台会刷一些错误提示<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.4.3更新内容<br>
+<br>
+★多人控制插件★ l4d_Rmc.smx<br>
+修正bug<br>
+<br>
+★客户端连接信息显示★ l4d2_info.smx<br>
+修正bug<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.4.19更新内容支持2134平台<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.4.21 更新内容<br>
+<br>
+替换插件 ★角色选择插件★ l4dcsm.smx 替换成 R_csm.smx 避免跳出.<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.5.10 更新内容<br>
+<br>
+★角色选择插件★ R_csm.smx<br>
+修正做为服务器模式时可能读不出角色菜单的bug<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.5.11 更新内容<br>
+<br>
+★角色选择插件★ R_csm.smx<br>
+修正1代人物第3位和第4位搞反的bug<br>
+<br>
+★14特感插件★ l4d2_autoIS.smx <br>
+修正贴脸刷特感问题<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.7.10 更新内容<br>
+<br>
+升级:<br>
+【sourcemod】Releases 1.6.0<br>
+【metamod】stable branch 1.10.2-git905<br>
+<br>
+【管理员添加工具1.4】 <br>
+1.1修复bug 增加添加新管理员功能<br>
+1.2修正1.1在无autoexec.cfg时会出错的bug<br>
+1.3新增自动加载r_cj.cfg来避免某些电脑无法加载autoexec.cfg而产生的问题<br>
+1.4新增选项,方便一些没插件的来增加管理员<br>
+<br>
+★功能插件★ rygive.smx<br>
+补全近战和M60<br>
+<br>
+★多人控制插件★ l4d_Rmc.smx<br>
+增加一个命令!sp 来显示当前还在加载中的玩家,方便查看或是踢出啥的<br>
+<br>
+★回血插件★ l4d2_health_return.smx <br>
+!onhx !offhx 开关回血插件<br>
+血量上限,击杀特感,救人,帮人打包可回血量<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d2_health_return.cfg<br>
+<br>
+★双倍备弹量★ l4d2_ammo_set.smx <br>
+!onammo 开启双倍备弹<br>
+!offammo 关闭双倍备弹<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.7.13 更新内容<br>
+<br>
+更新:<br>
+【sourcemod】stable branch 最新1.6.1-git4527<br>
+<br>
+★客户端连接信息显示★ l4d2_info.smx<br>
+修正一段会产生error的代码<br>
+<br>
+★多人控制插件★ l4d_Rmc.smx<br>
+增加!zs 自杀命令<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.9.13 更新内容<br>
+<br>
+更新:<br>
+【sourcemod】stable branch 最新1.6.2-git4568<br>
+【metamod】stable branch 最新1.10.3-git918<br>
+<br>
+★客户端连接信息显示及黑白提示★ l4d2_info.smx<br>
+修正加入某个队伍时会提示2次的bug<br>
+增加队友黑白提示及提示音<br>
+<br>
+★公告-击杀排名★ l4d2_kill_mvp.smx<br>
+增加显示 囧-被黑王-囧<br>
+<br>
+★回血插件★ l4d2_health_return.smx<br>
+增加击杀witch回血,默认20.<br>
+<br>
+★14特感插件★ l4d2_autoIS.smx <br>
+优化<br>
+<br>
+增加:<br>
+★Tank自动增加血量★ l4d2_tank_hp.smx<br>
+详细设定说明请看上面本插件介绍<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.9.21 更新内容<br>
+<br>
+★客户端连接信息显示及黑白提示★ l4d2_info.smx<br>
+修正有时不提示的bug<br>
+<br>
+★Tank自动增加血量★ l4d2_tank_hp.smx<br>
+更新介绍<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.11.25 更新内容<br>
+支持2137<br>
+<br>
+更新:<br>
+【sourcemod】stable branch 最新1.6.3-git4601<br>
+【metamod】stable branch 最新1.10.4-git923<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2014.12.15 更新内容<br>
+<br>
+增加:<br>
+插件清除工具<br>
+安装录像<br>
+PS:已会操作的不必更新,插件无变化<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2015.02.27 更新内容<br>
+<br>
+更新:<br>
+所有插件在新平台下重新编译 及一些记不得的小修正吧,久了忘了<br>
+【sourcemod】stable branch 最新1.7.1-git5161<br>
+【metamod】stable branch 最新1.10.5-git928<br>
+【电击器修正】<br>
+★多特插件★ l4d2_autoIS.smx 优化了下代码,改了下名(原14特感插件)详细设定说明请看上面本插件介绍<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2015.7.24 更新内容<br>
+<br>
+更新:<br>
+【sourcemod】stable branch 最新1.7.3-git5227<br>
+【metamod】stable branch 最新1.10.6-git940<br>
+所有插件在新平台下重新编译<br>
+★爆头击杀显示插件★ l4d_broadcast.smx 更新<br>
+★功能插件★ rygive.smx 修正<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2015.8.19 更新内容<br>
+<br>
+更新:<br>
+★多特插件★ 更名为 R_AutoIS.smx(替换时记得删了旧的l4d2_autoIS.smx,或者用插件清理工具清理)<br>
+修正&amp;增加功能!on142 !addif 具体看上面的说明<br>
+<br>
+★多人控制插件★ l4d_Rmc.smx 增加是否开启2个管理员预留通道具体看上面的说明<br>
+★爆头击杀显示插件★ l4d_broadcast.smx 修正<br>
+★Tank自动增加血量★ l4d2_tank_hp.smx 修正<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2015.8.29 更新内容<br>
+<br>
+更新 管理员添加工具1.5 可自行输入管理员密码<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2015.9.30 更新内容<br>
+<br>
+更新<br>
+★备弹量★ l4d2_ammo_set.smx <br>
+聊天输入<br>
+!onammo 开启2倍备弹<br>
+!offammo 关闭2倍备弹<br>
+!onammo2 开启无限备弹<br>
+!offammo2 关闭无限备弹<br>
+<br>
+增加:<br>
+★开关无限推或自动红外★ R_autoset.smx<br>
+聊天输入<br>
+!ontui 开启无限推<br>
+!offtui 关闭无限推<br>
+!onhw 开启自动红外<br>
+!offhw 关闭自动红外<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2015.10.1 更新内容<br>
+<br>
+更新&amp;改进<br>
+★Tank自动增加血量★ l4d2_tank_hp.smx <br>
+★开关无限推或自动红外★ R_autoset.smx<br>
+★备弹量★ l4d2_ammo_set.smx <br>
+聊天输入<br>
+!onammo 开启2倍备弹<br>
+!onammo2 开启无限备弹<br>
+!offammo 恢复默认备弹<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2015.10.17 更新内容<br>
+<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.7.3-git5265<br>
+【metamod】stable branch 最新1.10.7-git947<br>
+<br>
+更新&amp;改进<br>
+★回血插件★ l4d2_health_return.smx 修正cfg修改无效问题<br>
+<br>
+所有插件重新修正了下并在新平台下重新编译<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2015.11.8 更新内容<br>
+<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.7.3-git5273<br>
+【metamod】stable branch 最新1.10.7-git948<br>
+<br>
+更新&amp;改进<br>
+★功能插件★ rygive.smx 恢复刷小刀功能(因2141又不能刷了小刀了)<br>
+<br>
+★友伤控制★ R_UD_FF.smx <br>
+免除友伤:默认1,2,3全开(燃烧炸弹类的不免)<br>
+1.被特感(smoker,jockey,charger,hunter)控制时(解控后也有1秒的免友伤时间缓冲)<br>
+2.相互靠太近时<br>
+3.近战<br>
+<br>
+★开关无限推或自动红外或自动连跳★ R_autoset.smx<br>
+增加按住空格自动连跳<br>
+!onrb 开启按住空格自动连跳<br>
+!offrb 关闭按住空格自动连跳<br>
+<br>
+所有插件重新修正了下并在新平台下重新编译<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2016.2.19 更新内容<br>
+<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.7.3-git5292<br>
+【metamod】stable branch 最新1.10.7-git951<br>
+<br>
+更新&amp;改进<br>
+★多人控制插件★ l4d_Rmc.smx 添加自动增加踢除bot选项<br>
+★友伤控制★ R_UD_FF.smx 修正<br>
+<br>
+所有插件在新平台下重新编译<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2016.4.10 更新内容<br>
+<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.7.3-git5302<br>
+【metamod】stable branch 最新1.10.7-git952<br>
+<br>
+更新&amp;改进<br>
+★可刷出所有近战★<br>
+★功能插件★ rygive.smx 添加5-3增加刷出特感<br>
+★Tank自动增加血量★ l4d2_tank_hp.smx 改进<br>
+<br>
+增加<br>
+★第3人称散弹枪声修正★ R_TP_SG_FIX.smx<br>
+<br>
+所有插件在新平台下重新编译<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2016.7.12 更新内容<br>
+<br>
+更新 管理员添加工具1.6 改进:手动输入管理员游戏ID,不再从rev.ini里读取,以避免一些问题.<br>
+正版:游戏ID就是你steam的昵称<br>
+盗版:游戏ID就是你rev.ini里的PlayerName="xxx",引号里的xxx就是你的游戏ID<br>
+<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.8.0-git5919<br>
+<br>
+更新&amp;改进<br>
+★功能插件★ rygive.smx 添加5-4增加友伤控制<br>
+★多重补给插件★ l4d2_more_medical.smx 修正<br>
+★多人控制插件★ l4d_Rmc.smx 修正<br>
+★备弹量★ l4d2_ammo_set.smx <br>
+增加!onammo1 开启自定备弹<br>
+配置参数修改 游戏目录\left4dead2\cfg\sourcemod\l4d2_ammo_set.cfg<br>
+<br>
+所有插件在新平台下重新编译<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2016.7.17 更新内容<br>
+<br>
+修正以下2个插件在每回合会读取cfg的设置,以致!sset和!mmn命令只在当前回合生效的问题<br>
+★多重补给插件★ l4d2_more_medical.smx<br>
+★多人控制插件★ l4d_Rmc.smx<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2016.8.1 更新内容<br>
+<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.8.0-git5923<br>
+<br>
+★推荐更新★基本所有插件都优化修正了下<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2016.8.x 更新内容<br>
+<br>
+插件更新:<br>
+★功能插件★ rygive.smx 优化<br>
+★多特插件★ R_AutoIS.smx 增加一个控制在cfg默认开启什么模式<br>
+默认模式;0=关;1=!on14;2=!on142<br>
+R_AutoIS_T "2"<br>
+<br>
+插件增加: 具体看插件列表&amp;说明<br>
+★防止4+角色装备混乱★R-MA.smx <br>
+修正大于4人时过关然后回合重启时角色枪枝物品混乱(血量类的没做修正)<br>
+<br>
+★自动换图★R_AC_MAPS.smx<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2016.12.13 更新内容<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.8.0-git5965<br>
+【metamod】stable branch 最新1.10.7-git954<br>
+<br>
+插件更新:<br>
+★多特插件★ R_AutoIS.smx 修正<br>
+★友伤控制★ R_UD_FF.smx 修正<br>
+★防止4+角色装备混乱★R-MA.smx 修正<br>
+★备弹量★ l4d2_ammo_set.smx 当设定的M60备弹大于0时打完弹夹会自动重装不会扔掉<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2017-1-10 更新内容<br>
+插件更新:<br>
+★防止4+角色装备混乱★R-MA.smx <br>
+修正不载入问题<br>
+增加一个控制在cfg:回合开始后延时几秒载入上局装备,默认0.1秒;避免和一些第3方模式清刷装备而产生问题<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2017-1-26 更新内容<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.8-build 5969<br>
+更新:电击器修正 &amp; witch攻击修正 <br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2017-2-23 更新内容<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.8-build 5973<br>
+插件更新:<br>
+★回血插件★ l4d2_health_return.smx<br>
+★备弹量★ l4d2_ammo_set.smx<br>
+★多特插件★ R_AutoIS.smx<br>
+★开关无限推或自动红外或自动连跳★ R_autoset.smx<br>
+★多重补给插件★ l4d2_more_medical.smx<br>
+<br>
+以上插件在cfg里增加一个控制<br>
+[0=所有人|1=仅管理员]可使用命令<br>
+Only_Admin "0"<br>
+默认0所有人可用,请自行更改<br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2017-4-18 更新内容<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.8-build 5982<br>
+更新:<br>
+★多特插件★ R_AutoIS.smx 新增命令:!it 设置多样特感刷新时间<br>
+★多人控制插件★ l4d_Rmc.smx 修正管理员通道bug<br>
+★Tank自动增加血量★ l4d2_tank_hp.smx <br>
+CFG里增加设置:提示Tank生命[0关,1回合开始时,2玩家加入时,3=1+2] 默认2<br>
+<br>
+新增:<br>
+★反伤★ R_FF_Reflect.smx<br>
+AI及投掷,燃烧,爆炸类(榴弹会)的不反<br>
+反伤百分比,0.5=50% 1.0=100% (取值范围0.0-2.0)<br>
+默认0.5<br>
+开关命令: !onfs !offfs <br>
+<br>
+-------------------------------------------------<br>
+-------------------------------------------------<br>
+2017-8-3 更新内容<br>
+平台更新:<br>
+【sourcemod】stable branch 最新1.8.0-git6016<br>
+【metamod】stable branch 最新1.10.7-git959<br>
+更新:电击器修正 &amp; witch攻击修正 (8月20我又更新了下,日期就不改了)</p></div>
+<p>&nbsp;</p>
+</body>
+</html>
